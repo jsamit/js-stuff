@@ -14,15 +14,15 @@ Array.prototype.min = function(comparable = (a,b) => a - b) {
 Array.prototype.max = function(comparable = (a,b) => a - b) {
   let i = 0;
   let j = 1;
-  let min = this.length ? this[i] : Infinity;
+  let max = this.length ? this[i] : Infinity;
   while(j < this.length) {
     if(comparable(this[i],this[j]) <= 0) {
-      min = this[j];
+      max = this[j];
       i = j;
     }
     j++;
   }
-  return min;
+  return max;
 }
 const list = [1,2,3,4,5].reverse();
 console.log(list);
